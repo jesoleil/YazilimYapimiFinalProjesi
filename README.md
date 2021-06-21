@@ -9,7 +9,7 @@ UserStory-2 (Satıcının sahip oldukları ürünleri admin onayı ile sisteme e
 
 UserStory-3 (Alıcının sahip olduğu paranın Admin onayı ile sisteme eklenmesi (para tipi TL)) 
 
-User Story-4 (Fiyatın oluşması ile alıcının hesabına parasının olması ve satıcının hesabına ise ürünün olması lazım. Eğer alıcının almak istediği ürün var ise otomatik olarak alım işleminin gerçekleşmesi lazım.) ***
+UserStory-4 (Fiyatın oluşması ile alıcının hesabına parasının olması ve satıcının hesabına ise ürünün olması lazım. Eğer alıcının almak istediği ürün var ise otomatik olarak alım işleminin gerçekleşmesi lazım.) ***
 
 UserStory-5 (Alıcı bir fiyat belirleyebilecek, eğer istediği fiyattan satan kişi olmaz ise işlem gerçekleşmeyecek. Alım isteği ancak alıcının verdiği fiyattan ürünü satan bir kişi olana kadar bekleyecek.) ***
 
