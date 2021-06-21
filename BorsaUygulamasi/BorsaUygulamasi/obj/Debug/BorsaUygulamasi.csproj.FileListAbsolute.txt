@@ -12,3 +12,4 @@ D:\Ders\8-Yazılım Yapımı\BorsaUygulamasi\BorsaUygulamasi\obj\Debug\BorsaUygu
 D:\Ders\8-Yazılım Yapımı\BorsaUygulamasi\BorsaUygulamasi\obj\Debug\BorsaUygulamasi.csproj.CoreCompileInputs.cache
 D:\Ders\8-Yazılım Yapımı\BorsaUygulamasi\BorsaUygulamasi\obj\Debug\BorsaUygulamasi.exe
 D:\Ders\8-Yazılım Yapımı\BorsaUygulamasi\BorsaUygulamasi\obj\Debug\BorsaUygulamasi.pdb
+D:\Ders\8-Yazılım Yapımı\BorsaUygulamasi\BorsaUygulamasi\obj\Debug\BorsaUygulamasi.csproj.ResolveComReference.cache

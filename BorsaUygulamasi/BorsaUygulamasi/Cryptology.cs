@@ -8,7 +8,7 @@ namespace BorsaUygulamasi
 {
     class Cryptology
     {
-        public static string Encryption(string text, int key)
+        public static string Encryption(string text, int key)   //Şifreleme
         {
             char[] x = text.ToCharArray();
             string encryptedText = null;
@@ -21,7 +21,7 @@ namespace BorsaUygulamasi
 
         }
 
-        public static string Decryption(string text, int key)
+        public static string Decryption(string text, int key)   //Şifreyi çözme
         {
             char[] x = text.ToCharArray();
             string decryptedText = null;

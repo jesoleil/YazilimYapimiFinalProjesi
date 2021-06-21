@@ -37,11 +37,12 @@ namespace BorsaUygulamasi
             // 
             // btnRaporla
             // 
-            this.btnRaporla.BackColor = System.Drawing.Color.DarkCyan;
+            this.btnRaporla.BackColor = System.Drawing.Color.MidnightBlue;
             this.btnRaporla.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnRaporla.Location = new System.Drawing.Point(45, 247);
+            this.btnRaporla.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnRaporla.Location = new System.Drawing.Point(61, 273);
             this.btnRaporla.Name = "btnRaporla";
-            this.btnRaporla.Size = new System.Drawing.Size(126, 43);
+            this.btnRaporla.Size = new System.Drawing.Size(272, 43);
             this.btnRaporla.TabIndex = 0;
             this.btnRaporla.Text = "RAPORLA";
             this.btnRaporla.UseVisualStyleBackColor = false;
@@ -50,7 +51,7 @@ namespace BorsaUygulamasi
             // 
             this.lblTarih.AutoSize = true;
             this.lblTarih.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblTarih.Location = new System.Drawing.Point(41, 56);
+            this.lblTarih.Location = new System.Drawing.Point(57, 82);
             this.lblTarih.Name = "lblTarih";
             this.lblTarih.Size = new System.Drawing.Size(289, 23);
             this.lblTarih.TabIndex = 1;
@@ -58,23 +59,24 @@ namespace BorsaUygulamasi
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(45, 120);
+            this.dateTimePicker1.Location = new System.Drawing.Point(61, 146);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
+            this.dateTimePicker1.Size = new System.Drawing.Size(272, 22);
             this.dateTimePicker1.TabIndex = 2;
             // 
             // dateTimePicker2
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(45, 177);
+            this.dateTimePicker2.Location = new System.Drawing.Point(61, 203);
             this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(200, 22);
+            this.dateTimePicker2.Size = new System.Drawing.Size(272, 22);
             this.dateTimePicker2.TabIndex = 3;
             // 
             // RaporFormu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(434, 419);
+            this.BackColor = System.Drawing.Color.LightCyan;
+            this.ClientSize = new System.Drawing.Size(402, 428);
             this.Controls.Add(this.dateTimePicker2);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.lblTarih);

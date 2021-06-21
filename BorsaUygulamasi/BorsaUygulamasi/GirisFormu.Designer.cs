@@ -43,7 +43,7 @@ namespace BorsaUygulamasi
             this.lblSifre.AutoSize = true;
             this.lblSifre.BackColor = System.Drawing.Color.Transparent;
             this.lblSifre.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSifre.Location = new System.Drawing.Point(224, 206);
+            this.lblSifre.Location = new System.Drawing.Point(44, 187);
             this.lblSifre.Name = "lblSifre";
             this.lblSifre.Size = new System.Drawing.Size(68, 23);
             this.lblSifre.TabIndex = 12;
@@ -55,7 +55,7 @@ namespace BorsaUygulamasi
             this.lblKullaniciAdi.BackColor = System.Drawing.Color.Transparent;
             this.lblKullaniciAdi.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblKullaniciAdi.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblKullaniciAdi.Location = new System.Drawing.Point(224, 121);
+            this.lblKullaniciAdi.Location = new System.Drawing.Point(44, 102);
             this.lblKullaniciAdi.Name = "lblKullaniciAdi";
             this.lblKullaniciAdi.Size = new System.Drawing.Size(133, 23);
             this.lblKullaniciAdi.TabIndex = 11;
@@ -67,7 +67,7 @@ namespace BorsaUygulamasi
             this.linkKayitOl.BackColor = System.Drawing.Color.Transparent;
             this.linkKayitOl.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.linkKayitOl.LinkColor = System.Drawing.Color.MediumBlue;
-            this.linkKayitOl.Location = new System.Drawing.Point(224, 313);
+            this.linkKayitOl.Location = new System.Drawing.Point(44, 294);
             this.linkKayitOl.Name = "linkKayitOl";
             this.linkKayitOl.Size = new System.Drawing.Size(82, 23);
             this.linkKayitOl.TabIndex = 10;
@@ -78,15 +78,16 @@ namespace BorsaUygulamasi
             // txtboxSifre
             // 
             this.txtboxSifre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.txtboxSifre.Location = new System.Drawing.Point(422, 202);
+            this.txtboxSifre.Location = new System.Drawing.Point(242, 183);
             this.txtboxSifre.Name = "txtboxSifre";
             this.txtboxSifre.Size = new System.Drawing.Size(154, 22);
             this.txtboxSifre.TabIndex = 8;
+            this.txtboxSifre.TextChanged += new System.EventHandler(this.txtboxSifre_TextChanged);
             // 
             // txtboxKullaniciAdi
             // 
             this.txtboxKullaniciAdi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.txtboxKullaniciAdi.Location = new System.Drawing.Point(422, 115);
+            this.txtboxKullaniciAdi.Location = new System.Drawing.Point(242, 96);
             this.txtboxKullaniciAdi.Name = "txtboxKullaniciAdi";
             this.txtboxKullaniciAdi.Size = new System.Drawing.Size(154, 22);
             this.txtboxKullaniciAdi.TabIndex = 7;
@@ -95,7 +96,7 @@ namespace BorsaUygulamasi
             // 
             this.btnCikis.BackgroundImage = global::BorsaUygulamasi.Properties.Resources.cikis_ikon;
             this.btnCikis.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnCikis.Location = new System.Drawing.Point(512, 277);
+            this.btnCikis.Location = new System.Drawing.Point(332, 258);
             this.btnCikis.Name = "btnCikis";
             this.btnCikis.Size = new System.Drawing.Size(64, 59);
             this.btnCikis.TabIndex = 13;
@@ -107,7 +108,7 @@ namespace BorsaUygulamasi
             this.btnGiris.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnGiris.BackgroundImage = global::BorsaUygulamasi.Properties.Resources.giris_ikon;
             this.btnGiris.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnGiris.Location = new System.Drawing.Point(422, 277);
+            this.btnGiris.Location = new System.Drawing.Point(242, 258);
             this.btnGiris.Name = "btnGiris";
             this.btnGiris.Size = new System.Drawing.Size(62, 59);
             this.btnGiris.TabIndex = 9;
@@ -119,7 +120,8 @@ namespace BorsaUygulamasi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.LightCyan;
+            this.ClientSize = new System.Drawing.Size(455, 416);
             this.Controls.Add(this.btnCikis);
             this.Controls.Add(this.lblSifre);
             this.Controls.Add(this.lblKullaniciAdi);
@@ -128,6 +130,7 @@ namespace BorsaUygulamasi
             this.Controls.Add(this.txtboxSifre);
             this.Controls.Add(this.txtboxKullaniciAdi);
             this.Name = "GirisFormu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Giriş Sayfası";
             this.ResumeLayout(false);
             this.PerformLayout();

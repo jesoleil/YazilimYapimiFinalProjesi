@@ -47,6 +47,7 @@ namespace BorsaUygulamasi
             this.txtboxAd = new System.Windows.Forms.TextBox();
             this.btnKayitOl = new System.Windows.Forms.Button();
             this.btnGeriDon = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtboxPassword
@@ -223,11 +224,25 @@ namespace BorsaUygulamasi
             this.btnGeriDon.UseVisualStyleBackColor = true;
             this.btnGeriDon.Click += new System.EventHandler(this.btnGeriDon_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.ForeColor = System.Drawing.Color.Red;
+            this.label1.Location = new System.Drawing.Point(441, 184);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(281, 19);
+            this.label1.TabIndex = 36;
+            this.label1.Text = "Şifre minumum 8 karakter olmalıdır";
+            this.label1.Visible = false;
+            // 
             // KayitOlmaFormu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightCyan;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnKayitOl);
             this.Controls.Add(this.txtboxPassword);
             this.Controls.Add(this.txtboxUsername);
@@ -247,7 +262,9 @@ namespace BorsaUygulamasi
             this.Controls.Add(this.txtboxSoyad);
             this.Controls.Add(this.txtboxAd);
             this.Name = "KayitOlmaFormu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Kayıt Olma Formu";
+            this.Load += new System.EventHandler(this.KayitOlmaFormu_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -273,5 +290,6 @@ namespace BorsaUygulamasi
         private System.Windows.Forms.TextBox txtboxTcNo;
         private System.Windows.Forms.TextBox txtboxSoyad;
         private System.Windows.Forms.TextBox txtboxAd;
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -53,10 +53,11 @@ namespace BorsaUygulamasi
             this.lblSifre = new System.Windows.Forms.Label();
             this.lblKAdi = new System.Windows.Forms.Label();
             this.tabPageBakiye = new System.Windows.Forms.TabPage();
+            this.btnRaporAl = new System.Windows.Forms.Button();
             this.lblBakiyeDeger = new System.Windows.Forms.Label();
             this.lblKalanParaDeger = new System.Windows.Forms.Label();
             this.cmbParaBirimi = new System.Windows.Forms.ComboBox();
-            this.label7 = new System.Windows.Forms.Label();
+            this.lblParaBirimi = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lblBakiye = new System.Windows.Forms.Label();
@@ -68,6 +69,7 @@ namespace BorsaUygulamasi
             this.label5 = new System.Windows.Forms.Label();
             this.btnCikisB = new System.Windows.Forms.Button();
             this.tabPageUrunler = new System.Windows.Forms.TabPage();
+            this.btnUrunRapor = new System.Windows.Forms.Button();
             this.btnCikisU = new System.Windows.Forms.Button();
             this.txtboxBirimFiyat = new System.Windows.Forms.TextBox();
             this.lblBirimFiyat = new System.Windows.Forms.Label();
@@ -111,14 +113,16 @@ namespace BorsaUygulamasi
             this.tabControlKullanici.Controls.Add(this.tabPageBakiye);
             this.tabControlKullanici.Controls.Add(this.tabPageUrunler);
             this.tabControlKullanici.Controls.Add(this.tabPageAlisveris);
+            this.tabControlKullanici.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.tabControlKullanici.Location = new System.Drawing.Point(12, 13);
             this.tabControlKullanici.Name = "tabControlKullanici";
             this.tabControlKullanici.SelectedIndex = 0;
-            this.tabControlKullanici.Size = new System.Drawing.Size(776, 425);
+            this.tabControlKullanici.Size = new System.Drawing.Size(1080, 598);
             this.tabControlKullanici.TabIndex = 0;
             // 
             // tabPageBilgiler
             // 
+            this.tabPageBilgiler.BackColor = System.Drawing.Color.LightCyan;
             this.tabPageBilgiler.Controls.Add(this.tbxYetki);
             this.tabPageBilgiler.Controls.Add(this.lblYetki);
             this.tabPageBilgiler.Controls.Add(this.btnCikisKB);
@@ -139,22 +143,20 @@ namespace BorsaUygulamasi
             this.tabPageBilgiler.Controls.Add(this.lblAd);
             this.tabPageBilgiler.Controls.Add(this.lblSifre);
             this.tabPageBilgiler.Controls.Add(this.lblKAdi);
-            this.tabPageBilgiler.Location = new System.Drawing.Point(4, 25);
+            this.tabPageBilgiler.Location = new System.Drawing.Point(4, 32);
             this.tabPageBilgiler.Name = "tabPageBilgiler";
             this.tabPageBilgiler.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageBilgiler.Size = new System.Drawing.Size(768, 396);
+            this.tabPageBilgiler.Size = new System.Drawing.Size(1072, 562);
             this.tabPageBilgiler.TabIndex = 0;
             this.tabPageBilgiler.Text = "Bilgilerim";
-            this.tabPageBilgiler.UseVisualStyleBackColor = true;
-            this.tabPageBilgiler.Click += new System.EventHandler(this.tabPageBilgiler_Click);
             // 
             // tbxYetki
             // 
             this.tbxYetki.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.tbxYetki.Enabled = false;
-            this.tbxYetki.Location = new System.Drawing.Point(577, 41);
+            this.tbxYetki.Location = new System.Drawing.Point(868, 36);
             this.tbxYetki.Name = "tbxYetki";
-            this.tbxYetki.Size = new System.Drawing.Size(100, 22);
+            this.tbxYetki.Size = new System.Drawing.Size(181, 30);
             this.tbxYetki.TabIndex = 27;
             this.tbxYetki.Text = "Kullanıcı";
             this.tbxYetki.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -163,7 +165,7 @@ namespace BorsaUygulamasi
             // 
             this.lblYetki.AutoSize = true;
             this.lblYetki.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblYetki.Location = new System.Drawing.Point(460, 41);
+            this.lblYetki.Location = new System.Drawing.Point(749, 46);
             this.lblYetki.Name = "lblYetki";
             this.lblYetki.Size = new System.Drawing.Size(71, 23);
             this.lblYetki.TabIndex = 26;
@@ -173,7 +175,7 @@ namespace BorsaUygulamasi
             // 
             this.btnCikisKB.BackgroundImage = global::BorsaUygulamasi.Properties.Resources.cikis_ikon;
             this.btnCikisKB.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnCikisKB.Location = new System.Drawing.Point(674, 294);
+            this.btnCikisKB.Location = new System.Drawing.Point(979, 481);
             this.btnCikisKB.Name = "btnCikisKB";
             this.btnCikisKB.Size = new System.Drawing.Size(70, 67);
             this.btnCikisKB.TabIndex = 25;
@@ -182,11 +184,12 @@ namespace BorsaUygulamasi
             // 
             // btnGuncelle
             // 
-            this.btnGuncelle.BackColor = System.Drawing.Color.DarkCyan;
+            this.btnGuncelle.BackColor = System.Drawing.Color.MidnightBlue;
             this.btnGuncelle.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnGuncelle.Location = new System.Drawing.Point(483, 294);
+            this.btnGuncelle.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnGuncelle.Location = new System.Drawing.Point(753, 481);
             this.btnGuncelle.Name = "btnGuncelle";
-            this.btnGuncelle.Size = new System.Drawing.Size(169, 67);
+            this.btnGuncelle.Size = new System.Drawing.Size(204, 67);
             this.btnGuncelle.TabIndex = 2;
             this.btnGuncelle.Text = "BİLGİLERİMİ GÜNCELLE";
             this.btnGuncelle.UseVisualStyleBackColor = false;
@@ -195,72 +198,72 @@ namespace BorsaUygulamasi
             // txbAdres
             // 
             this.txbAdres.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.txbAdres.Location = new System.Drawing.Point(220, 338);
+            this.txbAdres.Location = new System.Drawing.Point(252, 505);
             this.txbAdres.Name = "txbAdres";
-            this.txbAdres.Size = new System.Drawing.Size(100, 22);
+            this.txbAdres.Size = new System.Drawing.Size(182, 30);
             this.txbAdres.TabIndex = 1;
             // 
             // txbEmail
             // 
             this.txbEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.txbEmail.Location = new System.Drawing.Point(220, 294);
+            this.txbEmail.Location = new System.Drawing.Point(252, 442);
             this.txbEmail.Name = "txbEmail";
-            this.txbEmail.Size = new System.Drawing.Size(100, 22);
+            this.txbEmail.Size = new System.Drawing.Size(182, 30);
             this.txbEmail.TabIndex = 1;
             // 
             // txbTelNo
             // 
             this.txbTelNo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.txbTelNo.Location = new System.Drawing.Point(220, 253);
+            this.txbTelNo.Location = new System.Drawing.Point(253, 376);
             this.txbTelNo.Name = "txbTelNo";
-            this.txbTelNo.Size = new System.Drawing.Size(100, 22);
+            this.txbTelNo.Size = new System.Drawing.Size(181, 30);
             this.txbTelNo.TabIndex = 1;
             // 
             // txbTcNo
             // 
             this.txbTcNo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.txbTcNo.Location = new System.Drawing.Point(220, 209);
+            this.txbTcNo.Location = new System.Drawing.Point(253, 306);
             this.txbTcNo.Name = "txbTcNo";
-            this.txbTcNo.Size = new System.Drawing.Size(100, 22);
+            this.txbTcNo.Size = new System.Drawing.Size(181, 30);
             this.txbTcNo.TabIndex = 1;
             // 
             // txbSoyad
             // 
             this.txbSoyad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.txbSoyad.Location = new System.Drawing.Point(220, 166);
+            this.txbSoyad.Location = new System.Drawing.Point(253, 238);
             this.txbSoyad.Name = "txbSoyad";
-            this.txbSoyad.Size = new System.Drawing.Size(100, 22);
+            this.txbSoyad.Size = new System.Drawing.Size(181, 30);
             this.txbSoyad.TabIndex = 1;
             // 
             // txbAd
             // 
             this.txbAd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.txbAd.Location = new System.Drawing.Point(220, 126);
+            this.txbAd.Location = new System.Drawing.Point(252, 175);
             this.txbAd.Name = "txbAd";
-            this.txbAd.Size = new System.Drawing.Size(100, 22);
+            this.txbAd.Size = new System.Drawing.Size(182, 30);
             this.txbAd.TabIndex = 1;
             // 
             // txbSifre
             // 
             this.txbSifre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.txbSifre.Location = new System.Drawing.Point(220, 88);
+            this.txbSifre.Location = new System.Drawing.Point(252, 103);
             this.txbSifre.Name = "txbSifre";
-            this.txbSifre.Size = new System.Drawing.Size(100, 22);
+            this.txbSifre.Size = new System.Drawing.Size(182, 30);
             this.txbSifre.TabIndex = 1;
             // 
             // txbKAdi
             // 
             this.txbKAdi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.txbKAdi.Location = new System.Drawing.Point(220, 41);
+            this.txbKAdi.Location = new System.Drawing.Point(252, 39);
             this.txbKAdi.Name = "txbKAdi";
-            this.txbKAdi.Size = new System.Drawing.Size(100, 22);
+            this.txbKAdi.Size = new System.Drawing.Size(182, 30);
             this.txbKAdi.TabIndex = 1;
             // 
             // lblAdres
             // 
             this.lblAdres.AutoSize = true;
             this.lblAdres.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblAdres.Location = new System.Drawing.Point(30, 338);
+            this.lblAdres.Location = new System.Drawing.Point(62, 505);
             this.lblAdres.Name = "lblAdres";
             this.lblAdres.Size = new System.Drawing.Size(77, 23);
             this.lblAdres.TabIndex = 0;
@@ -270,7 +273,7 @@ namespace BorsaUygulamasi
             // 
             this.lblEmail.AutoSize = true;
             this.lblEmail.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblEmail.Location = new System.Drawing.Point(29, 294);
+            this.lblEmail.Location = new System.Drawing.Point(61, 442);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(82, 23);
             this.lblEmail.TabIndex = 0;
@@ -280,7 +283,7 @@ namespace BorsaUygulamasi
             // 
             this.lblTelNo.AutoSize = true;
             this.lblTelNo.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblTelNo.Location = new System.Drawing.Point(29, 251);
+            this.lblTelNo.Location = new System.Drawing.Point(62, 374);
             this.lblTelNo.Name = "lblTelNo";
             this.lblTelNo.Size = new System.Drawing.Size(82, 23);
             this.lblTelNo.TabIndex = 0;
@@ -290,7 +293,7 @@ namespace BorsaUygulamasi
             // 
             this.lblTcNo.AutoSize = true;
             this.lblTcNo.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblTcNo.Location = new System.Drawing.Point(30, 209);
+            this.lblTcNo.Location = new System.Drawing.Point(63, 306);
             this.lblTcNo.Name = "lblTcNo";
             this.lblTcNo.Size = new System.Drawing.Size(83, 23);
             this.lblTcNo.TabIndex = 0;
@@ -300,7 +303,7 @@ namespace BorsaUygulamasi
             // 
             this.lblSoyad.AutoSize = true;
             this.lblSoyad.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblSoyad.Location = new System.Drawing.Point(29, 165);
+            this.lblSoyad.Location = new System.Drawing.Point(62, 237);
             this.lblSoyad.Name = "lblSoyad";
             this.lblSoyad.Size = new System.Drawing.Size(78, 23);
             this.lblSoyad.TabIndex = 0;
@@ -310,7 +313,7 @@ namespace BorsaUygulamasi
             // 
             this.lblAd.AutoSize = true;
             this.lblAd.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblAd.Location = new System.Drawing.Point(30, 124);
+            this.lblAd.Location = new System.Drawing.Point(62, 173);
             this.lblAd.Name = "lblAd";
             this.lblAd.Size = new System.Drawing.Size(51, 23);
             this.lblAd.TabIndex = 0;
@@ -320,7 +323,7 @@ namespace BorsaUygulamasi
             // 
             this.lblSifre.AutoSize = true;
             this.lblSifre.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblSifre.Location = new System.Drawing.Point(29, 86);
+            this.lblSifre.Location = new System.Drawing.Point(62, 103);
             this.lblSifre.Name = "lblSifre";
             this.lblSifre.Size = new System.Drawing.Size(68, 23);
             this.lblSifre.TabIndex = 0;
@@ -330,7 +333,7 @@ namespace BorsaUygulamasi
             // 
             this.lblKAdi.AutoSize = true;
             this.lblKAdi.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblKAdi.Location = new System.Drawing.Point(29, 41);
+            this.lblKAdi.Location = new System.Drawing.Point(62, 36);
             this.lblKAdi.Name = "lblKAdi";
             this.lblKAdi.Size = new System.Drawing.Size(133, 23);
             this.lblKAdi.TabIndex = 0;
@@ -338,10 +341,12 @@ namespace BorsaUygulamasi
             // 
             // tabPageBakiye
             // 
+            this.tabPageBakiye.BackColor = System.Drawing.Color.LightCyan;
+            this.tabPageBakiye.Controls.Add(this.btnRaporAl);
             this.tabPageBakiye.Controls.Add(this.lblBakiyeDeger);
             this.tabPageBakiye.Controls.Add(this.lblKalanParaDeger);
             this.tabPageBakiye.Controls.Add(this.cmbParaBirimi);
-            this.tabPageBakiye.Controls.Add(this.label7);
+            this.tabPageBakiye.Controls.Add(this.lblParaBirimi);
             this.tabPageBakiye.Controls.Add(this.label2);
             this.tabPageBakiye.Controls.Add(this.label1);
             this.tabPageBakiye.Controls.Add(this.lblBakiye);
@@ -352,20 +357,32 @@ namespace BorsaUygulamasi
             this.tabPageBakiye.Controls.Add(this.dataGridViewParaHareketleri);
             this.tabPageBakiye.Controls.Add(this.label5);
             this.tabPageBakiye.Controls.Add(this.btnCikisB);
-            this.tabPageBakiye.Location = new System.Drawing.Point(4, 25);
+            this.tabPageBakiye.Location = new System.Drawing.Point(4, 32);
             this.tabPageBakiye.Name = "tabPageBakiye";
             this.tabPageBakiye.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageBakiye.Size = new System.Drawing.Size(768, 396);
+            this.tabPageBakiye.Size = new System.Drawing.Size(1072, 562);
             this.tabPageBakiye.TabIndex = 1;
             this.tabPageBakiye.Text = "Bakiyem";
-            this.tabPageBakiye.UseVisualStyleBackColor = true;
+            // 
+            // btnRaporAl
+            // 
+            this.btnRaporAl.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btnRaporAl.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnRaporAl.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnRaporAl.Location = new System.Drawing.Point(698, 478);
+            this.btnRaporAl.Name = "btnRaporAl";
+            this.btnRaporAl.Size = new System.Drawing.Size(191, 58);
+            this.btnRaporAl.TabIndex = 43;
+            this.btnRaporAl.Text = "EXCEL\'E AKTAR";
+            this.btnRaporAl.UseVisualStyleBackColor = false;
+            this.btnRaporAl.Click += new System.EventHandler(this.btnRaporAl_Click);
             // 
             // lblBakiyeDeger
             // 
             this.lblBakiyeDeger.AutoSize = true;
-            this.lblBakiyeDeger.Location = new System.Drawing.Point(695, 113);
+            this.lblBakiyeDeger.Location = new System.Drawing.Point(889, 255);
             this.lblBakiyeDeger.Name = "lblBakiyeDeger";
-            this.lblBakiyeDeger.Size = new System.Drawing.Size(0, 17);
+            this.lblBakiyeDeger.Size = new System.Drawing.Size(0, 23);
             this.lblBakiyeDeger.TabIndex = 42;
             // 
             // lblKalanParaDeger
@@ -373,7 +390,7 @@ namespace BorsaUygulamasi
             this.lblKalanParaDeger.AutoSize = true;
             this.lblKalanParaDeger.Location = new System.Drawing.Point(695, 58);
             this.lblKalanParaDeger.Name = "lblKalanParaDeger";
-            this.lblKalanParaDeger.Size = new System.Drawing.Size(0, 17);
+            this.lblKalanParaDeger.Size = new System.Drawing.Size(0, 23);
             this.lblKalanParaDeger.TabIndex = 41;
             // 
             // cmbParaBirimi
@@ -385,27 +402,27 @@ namespace BorsaUygulamasi
             "EUR",
             "GBP",
             "TL"});
-            this.cmbParaBirimi.Location = new System.Drawing.Point(192, 291);
+            this.cmbParaBirimi.Location = new System.Drawing.Point(871, 112);
             this.cmbParaBirimi.Name = "cmbParaBirimi";
-            this.cmbParaBirimi.Size = new System.Drawing.Size(121, 24);
+            this.cmbParaBirimi.Size = new System.Drawing.Size(181, 31);
             this.cmbParaBirimi.TabIndex = 40;
             // 
-            // label7
+            // lblParaBirimi
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label7.Location = new System.Drawing.Point(22, 289);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(123, 23);
-            this.label7.TabIndex = 39;
-            this.label7.Text = "Para Birimi : ";
+            this.lblParaBirimi.AutoSize = true;
+            this.lblParaBirimi.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblParaBirimi.Location = new System.Drawing.Point(701, 120);
+            this.lblParaBirimi.Name = "lblParaBirimi";
+            this.lblParaBirimi.Size = new System.Drawing.Size(123, 23);
+            this.lblParaBirimi.TabIndex = 39;
+            this.lblParaBirimi.Text = "Para Birimi : ";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(309, 210);
+            this.label2.Location = new System.Drawing.Point(988, 31);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(0, 19);
             this.label2.TabIndex = 37;
@@ -425,7 +442,7 @@ namespace BorsaUygulamasi
             this.lblBakiye.AutoSize = true;
             this.lblBakiye.BackColor = System.Drawing.Color.Transparent;
             this.lblBakiye.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblBakiye.Location = new System.Drawing.Point(532, 107);
+            this.lblBakiye.Location = new System.Drawing.Point(701, 255);
             this.lblBakiye.Name = "lblBakiye";
             this.lblBakiye.Size = new System.Drawing.Size(86, 23);
             this.lblBakiye.TabIndex = 35;
@@ -436,7 +453,7 @@ namespace BorsaUygulamasi
             this.lblKalanPara.AutoSize = true;
             this.lblKalanPara.BackColor = System.Drawing.Color.Transparent;
             this.lblKalanPara.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblKalanPara.Location = new System.Drawing.Point(532, 58);
+            this.lblKalanPara.Location = new System.Drawing.Point(701, 206);
             this.lblKalanPara.Name = "lblKalanPara";
             this.lblKalanPara.Size = new System.Drawing.Size(121, 23);
             this.lblKalanPara.TabIndex = 34;
@@ -444,22 +461,23 @@ namespace BorsaUygulamasi
             // 
             // btnParaEkle
             // 
-            this.btnParaEkle.BackColor = System.Drawing.Color.DarkCyan;
+            this.btnParaEkle.BackColor = System.Drawing.Color.MidnightBlue;
             this.btnParaEkle.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnParaEkle.Location = new System.Drawing.Point(521, 303);
+            this.btnParaEkle.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnParaEkle.Location = new System.Drawing.Point(698, 384);
             this.btnParaEkle.Name = "btnParaEkle";
-            this.btnParaEkle.Size = new System.Drawing.Size(111, 55);
+            this.btnParaEkle.Size = new System.Drawing.Size(191, 59);
             this.btnParaEkle.TabIndex = 33;
-            this.btnParaEkle.Text = "Para Ekle";
+            this.btnParaEkle.Text = "YATIR";
             this.btnParaEkle.UseVisualStyleBackColor = false;
             this.btnParaEkle.Click += new System.EventHandler(this.btnParaEkle_Click);
             // 
             // txtboxParaMiktari
             // 
             this.txtboxParaMiktari.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.txtboxParaMiktari.Location = new System.Drawing.Point(192, 239);
+            this.txtboxParaMiktari.Location = new System.Drawing.Point(871, 60);
             this.txtboxParaMiktari.Name = "txtboxParaMiktari";
-            this.txtboxParaMiktari.Size = new System.Drawing.Size(121, 22);
+            this.txtboxParaMiktari.Size = new System.Drawing.Size(181, 30);
             this.txtboxParaMiktari.TabIndex = 32;
             // 
             // lblParaMiktari
@@ -467,7 +485,7 @@ namespace BorsaUygulamasi
             this.lblParaMiktari.AutoSize = true;
             this.lblParaMiktari.BackColor = System.Drawing.Color.Transparent;
             this.lblParaMiktari.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblParaMiktari.Location = new System.Drawing.Point(22, 237);
+            this.lblParaMiktari.Location = new System.Drawing.Point(701, 58);
             this.lblParaMiktari.Name = "lblParaMiktari";
             this.lblParaMiktari.Size = new System.Drawing.Size(136, 23);
             this.lblParaMiktari.TabIndex = 31;
@@ -475,12 +493,13 @@ namespace BorsaUygulamasi
             // 
             // dataGridViewParaHareketleri
             // 
+            this.dataGridViewParaHareketleri.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewParaHareketleri.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewParaHareketleri.Location = new System.Drawing.Point(16, 58);
             this.dataGridViewParaHareketleri.Name = "dataGridViewParaHareketleri";
             this.dataGridViewParaHareketleri.RowHeadersWidth = 51;
             this.dataGridViewParaHareketleri.RowTemplate.Height = 24;
-            this.dataGridViewParaHareketleri.Size = new System.Drawing.Size(494, 150);
+            this.dataGridViewParaHareketleri.Size = new System.Drawing.Size(648, 478);
             this.dataGridViewParaHareketleri.TabIndex = 30;
             // 
             // label5
@@ -498,15 +517,17 @@ namespace BorsaUygulamasi
             // 
             this.btnCikisB.BackgroundImage = global::BorsaUygulamasi.Properties.Resources.cikis_ikon;
             this.btnCikisB.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnCikisB.Location = new System.Drawing.Point(671, 303);
+            this.btnCikisB.Location = new System.Drawing.Point(983, 478);
             this.btnCikisB.Name = "btnCikisB";
-            this.btnCikisB.Size = new System.Drawing.Size(69, 55);
+            this.btnCikisB.Size = new System.Drawing.Size(69, 59);
             this.btnCikisB.TabIndex = 38;
             this.btnCikisB.UseVisualStyleBackColor = true;
             this.btnCikisB.Click += new System.EventHandler(this.btnCikisB_Click);
             // 
             // tabPageUrunler
             // 
+            this.tabPageUrunler.BackColor = System.Drawing.Color.LightCyan;
+            this.tabPageUrunler.Controls.Add(this.btnUrunRapor);
             this.tabPageUrunler.Controls.Add(this.btnCikisU);
             this.tabPageUrunler.Controls.Add(this.txtboxBirimFiyat);
             this.tabPageUrunler.Controls.Add(this.lblBirimFiyat);
@@ -517,21 +538,33 @@ namespace BorsaUygulamasi
             this.tabPageUrunler.Controls.Add(this.cmbEklenecekUrunAdi);
             this.tabPageUrunler.Controls.Add(this.dataGridViewUrunHareketleri);
             this.tabPageUrunler.Controls.Add(this.label3);
-            this.tabPageUrunler.Location = new System.Drawing.Point(4, 25);
+            this.tabPageUrunler.Location = new System.Drawing.Point(4, 32);
             this.tabPageUrunler.Name = "tabPageUrunler";
             this.tabPageUrunler.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageUrunler.Size = new System.Drawing.Size(768, 396);
+            this.tabPageUrunler.Size = new System.Drawing.Size(1072, 562);
             this.tabPageUrunler.TabIndex = 2;
             this.tabPageUrunler.Text = "Ürünlerim";
-            this.tabPageUrunler.UseVisualStyleBackColor = true;
+            // 
+            // btnUrunRapor
+            // 
+            this.btnUrunRapor.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btnUrunRapor.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnUrunRapor.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnUrunRapor.Location = new System.Drawing.Point(728, 486);
+            this.btnUrunRapor.Name = "btnUrunRapor";
+            this.btnUrunRapor.Size = new System.Drawing.Size(148, 60);
+            this.btnUrunRapor.TabIndex = 44;
+            this.btnUrunRapor.Text = "EXCEL\'E AKTAR";
+            this.btnUrunRapor.UseVisualStyleBackColor = false;
+            this.btnUrunRapor.Click += new System.EventHandler(this.btnUrunRapor_Click);
             // 
             // btnCikisU
             // 
             this.btnCikisU.BackgroundImage = global::BorsaUygulamasi.Properties.Resources.cikis_ikon;
             this.btnCikisU.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnCikisU.Location = new System.Drawing.Point(673, 305);
+            this.btnCikisU.Location = new System.Drawing.Point(982, 486);
             this.btnCikisU.Name = "btnCikisU";
-            this.btnCikisU.Size = new System.Drawing.Size(69, 55);
+            this.btnCikisU.Size = new System.Drawing.Size(69, 60);
             this.btnCikisU.TabIndex = 36;
             this.btnCikisU.UseVisualStyleBackColor = true;
             this.btnCikisU.Click += new System.EventHandler(this.btnCikisU_Click);
@@ -539,9 +572,9 @@ namespace BorsaUygulamasi
             // txtboxBirimFiyat
             // 
             this.txtboxBirimFiyat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.txtboxBirimFiyat.Location = new System.Drawing.Point(192, 321);
+            this.txtboxBirimFiyat.Location = new System.Drawing.Point(894, 173);
             this.txtboxBirimFiyat.Name = "txtboxBirimFiyat";
-            this.txtboxBirimFiyat.Size = new System.Drawing.Size(121, 22);
+            this.txtboxBirimFiyat.Size = new System.Drawing.Size(157, 30);
             this.txtboxBirimFiyat.TabIndex = 35;
             // 
             // lblBirimFiyat
@@ -549,7 +582,7 @@ namespace BorsaUygulamasi
             this.lblBirimFiyat.AutoSize = true;
             this.lblBirimFiyat.BackColor = System.Drawing.Color.Transparent;
             this.lblBirimFiyat.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblBirimFiyat.Location = new System.Drawing.Point(22, 324);
+            this.lblBirimFiyat.Location = new System.Drawing.Point(724, 176);
             this.lblBirimFiyat.Name = "lblBirimFiyat";
             this.lblBirimFiyat.Size = new System.Drawing.Size(121, 23);
             this.lblBirimFiyat.TabIndex = 34;
@@ -557,13 +590,14 @@ namespace BorsaUygulamasi
             // 
             // btnUrunEkle
             // 
-            this.btnUrunEkle.BackColor = System.Drawing.Color.DarkCyan;
+            this.btnUrunEkle.BackColor = System.Drawing.Color.MidnightBlue;
             this.btnUrunEkle.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnUrunEkle.Location = new System.Drawing.Point(520, 305);
+            this.btnUrunEkle.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnUrunEkle.Location = new System.Drawing.Point(728, 401);
             this.btnUrunEkle.Name = "btnUrunEkle";
-            this.btnUrunEkle.Size = new System.Drawing.Size(121, 55);
+            this.btnUrunEkle.Size = new System.Drawing.Size(148, 55);
             this.btnUrunEkle.TabIndex = 33;
-            this.btnUrunEkle.Text = "Ürün Ekle";
+            this.btnUrunEkle.Text = "SATIŞA KOY";
             this.btnUrunEkle.UseVisualStyleBackColor = false;
             this.btnUrunEkle.Click += new System.EventHandler(this.btnUrunEkle_Click);
             // 
@@ -572,7 +606,7 @@ namespace BorsaUygulamasi
             this.lblUrunMiktar.AutoSize = true;
             this.lblUrunMiktar.BackColor = System.Drawing.Color.Transparent;
             this.lblUrunMiktar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblUrunMiktar.Location = new System.Drawing.Point(22, 282);
+            this.lblUrunMiktar.Location = new System.Drawing.Point(724, 117);
             this.lblUrunMiktar.Name = "lblUrunMiktar";
             this.lblUrunMiktar.Size = new System.Drawing.Size(115, 23);
             this.lblUrunMiktar.TabIndex = 32;
@@ -581,9 +615,9 @@ namespace BorsaUygulamasi
             // txtboxUrunMiktari
             // 
             this.txtboxUrunMiktari.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.txtboxUrunMiktari.Location = new System.Drawing.Point(192, 275);
+            this.txtboxUrunMiktari.Location = new System.Drawing.Point(894, 117);
             this.txtboxUrunMiktari.Name = "txtboxUrunMiktari";
-            this.txtboxUrunMiktari.Size = new System.Drawing.Size(121, 22);
+            this.txtboxUrunMiktari.Size = new System.Drawing.Size(157, 30);
             this.txtboxUrunMiktari.TabIndex = 31;
             // 
             // lblUrunAdi
@@ -591,7 +625,7 @@ namespace BorsaUygulamasi
             this.lblUrunAdi.AutoSize = true;
             this.lblUrunAdi.BackColor = System.Drawing.Color.Transparent;
             this.lblUrunAdi.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblUrunAdi.Location = new System.Drawing.Point(22, 233);
+            this.lblUrunAdi.Location = new System.Drawing.Point(724, 60);
             this.lblUrunAdi.Name = "lblUrunAdi";
             this.lblUrunAdi.Size = new System.Drawing.Size(103, 23);
             this.lblUrunAdi.TabIndex = 30;
@@ -603,9 +637,9 @@ namespace BorsaUygulamasi
             this.cmbEklenecekUrunAdi.DataSource = this.ıtemBindingSource;
             this.cmbEklenecekUrunAdi.DisplayMember = "ItemName";
             this.cmbEklenecekUrunAdi.FormattingEnabled = true;
-            this.cmbEklenecekUrunAdi.Location = new System.Drawing.Point(192, 226);
+            this.cmbEklenecekUrunAdi.Location = new System.Drawing.Point(894, 62);
             this.cmbEklenecekUrunAdi.Name = "cmbEklenecekUrunAdi";
-            this.cmbEklenecekUrunAdi.Size = new System.Drawing.Size(121, 24);
+            this.cmbEklenecekUrunAdi.Size = new System.Drawing.Size(157, 31);
             this.cmbEklenecekUrunAdi.TabIndex = 29;
             this.cmbEklenecekUrunAdi.ValueMember = "ItemID";
             // 
@@ -621,12 +655,13 @@ namespace BorsaUygulamasi
             // 
             // dataGridViewUrunHareketleri
             // 
+            this.dataGridViewUrunHareketleri.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewUrunHareketleri.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewUrunHareketleri.Location = new System.Drawing.Point(10, 45);
+            this.dataGridViewUrunHareketleri.Location = new System.Drawing.Point(10, 62);
             this.dataGridViewUrunHareketleri.Name = "dataGridViewUrunHareketleri";
             this.dataGridViewUrunHareketleri.RowHeadersWidth = 51;
             this.dataGridViewUrunHareketleri.RowTemplate.Height = 24;
-            this.dataGridViewUrunHareketleri.Size = new System.Drawing.Size(732, 150);
+            this.dataGridViewUrunHareketleri.Size = new System.Drawing.Size(682, 484);
             this.dataGridViewUrunHareketleri.TabIndex = 28;
             // 
             // label3
@@ -642,6 +677,7 @@ namespace BorsaUygulamasi
             // 
             // tabPageAlisveris
             // 
+            this.tabPageAlisveris.BackColor = System.Drawing.Color.LightCyan;
             this.tabPageAlisveris.Controls.Add(this.btnRapor);
             this.tabPageAlisveris.Controls.Add(this.txtboxAlinacakBirimFiyat);
             this.tabPageAlisveris.Controls.Add(this.label6);
@@ -653,38 +689,38 @@ namespace BorsaUygulamasi
             this.tabPageAlisveris.Controls.Add(this.label4);
             this.tabPageAlisveris.Controls.Add(this.dataGridViewSatistakiUrunler);
             this.tabPageAlisveris.Controls.Add(this.btnCikisA);
-            this.tabPageAlisveris.Location = new System.Drawing.Point(4, 25);
+            this.tabPageAlisveris.Location = new System.Drawing.Point(4, 32);
             this.tabPageAlisveris.Name = "tabPageAlisveris";
             this.tabPageAlisveris.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageAlisveris.Size = new System.Drawing.Size(768, 396);
+            this.tabPageAlisveris.Size = new System.Drawing.Size(1072, 562);
             this.tabPageAlisveris.TabIndex = 3;
             this.tabPageAlisveris.Text = "Alışveriş";
-            this.tabPageAlisveris.UseVisualStyleBackColor = true;
             // 
             // btnRapor
             // 
-            this.btnRapor.BackColor = System.Drawing.Color.DarkCyan;
+            this.btnRapor.BackColor = System.Drawing.Color.MidnightBlue;
             this.btnRapor.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnRapor.Location = new System.Drawing.Point(526, 230);
+            this.btnRapor.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnRapor.Location = new System.Drawing.Point(835, 417);
             this.btnRapor.Name = "btnRapor";
-            this.btnRapor.Size = new System.Drawing.Size(218, 37);
+            this.btnRapor.Size = new System.Drawing.Size(218, 51);
             this.btnRapor.TabIndex = 38;
-            this.btnRapor.Text = "Rapor Oluştur";
+            this.btnRapor.Text = "RAPORLA";
             this.btnRapor.UseVisualStyleBackColor = false;
             // 
             // txtboxAlinacakBirimFiyat
             // 
             this.txtboxAlinacakBirimFiyat.BackColor = System.Drawing.Color.LightGray;
-            this.txtboxAlinacakBirimFiyat.Location = new System.Drawing.Point(335, 323);
+            this.txtboxAlinacakBirimFiyat.Location = new System.Drawing.Point(336, 517);
             this.txtboxAlinacakBirimFiyat.Name = "txtboxAlinacakBirimFiyat";
-            this.txtboxAlinacakBirimFiyat.Size = new System.Drawing.Size(121, 22);
+            this.txtboxAlinacakBirimFiyat.Size = new System.Drawing.Size(175, 30);
             this.txtboxAlinacakBirimFiyat.TabIndex = 37;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label6.Location = new System.Drawing.Point(18, 321);
+            this.label6.Location = new System.Drawing.Point(19, 515);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(263, 23);
             this.label6.TabIndex = 36;
@@ -692,22 +728,23 @@ namespace BorsaUygulamasi
             // 
             // btnUrunuAl
             // 
-            this.btnUrunuAl.BackColor = System.Drawing.Color.DarkCyan;
+            this.btnUrunuAl.BackColor = System.Drawing.Color.MidnightBlue;
             this.btnUrunuAl.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnUrunuAl.Location = new System.Drawing.Point(526, 321);
+            this.btnUrunuAl.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnUrunuAl.Location = new System.Drawing.Point(835, 489);
             this.btnUrunuAl.Name = "btnUrunuAl";
             this.btnUrunuAl.Size = new System.Drawing.Size(121, 55);
             this.btnUrunuAl.TabIndex = 34;
-            this.btnUrunuAl.Text = "Ürünü Al";
+            this.btnUrunuAl.Text = "AL";
             this.btnUrunuAl.UseVisualStyleBackColor = false;
             this.btnUrunuAl.Click += new System.EventHandler(this.btnUrunuAl_Click);
             // 
             // txtboxAlinacakUrunMiktari
             // 
             this.txtboxAlinacakUrunMiktari.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.txtboxAlinacakUrunMiktari.Location = new System.Drawing.Point(335, 277);
+            this.txtboxAlinacakUrunMiktari.Location = new System.Drawing.Point(336, 471);
             this.txtboxAlinacakUrunMiktari.Name = "txtboxAlinacakUrunMiktari";
-            this.txtboxAlinacakUrunMiktari.Size = new System.Drawing.Size(121, 22);
+            this.txtboxAlinacakUrunMiktari.Size = new System.Drawing.Size(175, 30);
             this.txtboxAlinacakUrunMiktari.TabIndex = 33;
             // 
             // cmbAlinacakUrunAdi
@@ -716,9 +753,9 @@ namespace BorsaUygulamasi
             this.cmbAlinacakUrunAdi.DataSource = this.ıtemBindingSource;
             this.cmbAlinacakUrunAdi.DisplayMember = "ItemName";
             this.cmbAlinacakUrunAdi.FormattingEnabled = true;
-            this.cmbAlinacakUrunAdi.Location = new System.Drawing.Point(335, 229);
+            this.cmbAlinacakUrunAdi.Location = new System.Drawing.Point(336, 423);
             this.cmbAlinacakUrunAdi.Name = "cmbAlinacakUrunAdi";
-            this.cmbAlinacakUrunAdi.Size = new System.Drawing.Size(121, 24);
+            this.cmbAlinacakUrunAdi.Size = new System.Drawing.Size(175, 31);
             this.cmbAlinacakUrunAdi.TabIndex = 32;
             this.cmbAlinacakUrunAdi.ValueMember = "ItemID";
             // 
@@ -727,7 +764,7 @@ namespace BorsaUygulamasi
             this.lblAlinacakUrunMiktari.AutoSize = true;
             this.lblAlinacakUrunMiktari.BackColor = System.Drawing.Color.Transparent;
             this.lblAlinacakUrunMiktari.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblAlinacakUrunMiktari.Location = new System.Drawing.Point(18, 276);
+            this.lblAlinacakUrunMiktari.Location = new System.Drawing.Point(19, 470);
             this.lblAlinacakUrunMiktari.Name = "lblAlinacakUrunMiktari";
             this.lblAlinacakUrunMiktari.Size = new System.Drawing.Size(139, 23);
             this.lblAlinacakUrunMiktari.TabIndex = 31;
@@ -738,7 +775,7 @@ namespace BorsaUygulamasi
             this.lblAlinacakUrun.AutoSize = true;
             this.lblAlinacakUrun.BackColor = System.Drawing.Color.Transparent;
             this.lblAlinacakUrun.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblAlinacakUrun.Location = new System.Drawing.Point(18, 230);
+            this.lblAlinacakUrun.Location = new System.Drawing.Point(19, 424);
             this.lblAlinacakUrun.Name = "lblAlinacakUrun";
             this.lblAlinacakUrun.Size = new System.Drawing.Size(149, 23);
             this.lblAlinacakUrun.TabIndex = 30;
@@ -757,19 +794,20 @@ namespace BorsaUygulamasi
             // 
             // dataGridViewSatistakiUrunler
             // 
+            this.dataGridViewSatistakiUrunler.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewSatistakiUrunler.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewSatistakiUrunler.Location = new System.Drawing.Point(12, 38);
+            this.dataGridViewSatistakiUrunler.Location = new System.Drawing.Point(12, 54);
             this.dataGridViewSatistakiUrunler.Name = "dataGridViewSatistakiUrunler";
             this.dataGridViewSatistakiUrunler.RowHeadersWidth = 51;
             this.dataGridViewSatistakiUrunler.RowTemplate.Height = 24;
-            this.dataGridViewSatistakiUrunler.Size = new System.Drawing.Size(732, 164);
+            this.dataGridViewSatistakiUrunler.Size = new System.Drawing.Size(1041, 333);
             this.dataGridViewSatistakiUrunler.TabIndex = 28;
             // 
             // btnCikisA
             // 
             this.btnCikisA.BackgroundImage = global::BorsaUygulamasi.Properties.Resources.cikis_ikon;
             this.btnCikisA.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnCikisA.Location = new System.Drawing.Point(675, 321);
+            this.btnCikisA.Location = new System.Drawing.Point(984, 489);
             this.btnCikisA.Name = "btnCikisA";
             this.btnCikisA.Size = new System.Drawing.Size(69, 55);
             this.btnCikisA.TabIndex = 35;
@@ -784,9 +822,11 @@ namespace BorsaUygulamasi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.LightCyan;
+            this.ClientSize = new System.Drawing.Size(1116, 623);
             this.Controls.Add(this.tabControlKullanici);
             this.Name = "KullaniciFormu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Kullanıcı Sayfası";
             this.Load += new System.EventHandler(this.KullaniciFormu_Load);
             this.tabControlKullanici.ResumeLayout(false);
@@ -846,7 +886,7 @@ namespace BorsaUygulamasi
         private System.Windows.Forms.DataGridView dataGridViewSatistakiUrunler;
         private System.Windows.Forms.Button btnRapor;
         private System.Windows.Forms.ComboBox cmbParaBirimi;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lblParaBirimi;
         private System.Windows.Forms.Label lblSoyad;
         private System.Windows.Forms.Label lblAd;
         private System.Windows.Forms.Label lblSifre;
@@ -872,5 +912,7 @@ namespace BorsaUygulamasi
         private PlanlamaOyunuDataSet planlamaOyunuDataSet;
         private System.Windows.Forms.BindingSource ıtemBindingSource;
         private PlanlamaOyunuDataSetTableAdapters.ItemTableAdapter itemTableAdapter;
+        private System.Windows.Forms.Button btnRaporAl;
+        private System.Windows.Forms.Button btnUrunRapor;
     }
 }
