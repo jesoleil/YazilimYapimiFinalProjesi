@@ -12,5 +12,7 @@ UserStory-7 (Alıcı sisteme sadece TL değil farklı para tiplerinden de yükle
 UserStory-8 (Muhasebe_kullanıcısı aracılık ücreti yüzde 1 olsun ve bu tutar alıcıdan tahsil edilsin.)
 
 ![5dz444](https://user-images.githubusercontent.com/58444614/122695716-ecaae380-d249-11eb-92f2-789e2e87dfb4.gif)
+
 ![5dz3w9](https://user-images.githubusercontent.com/58444614/122695731-f5031e80-d249-11eb-846e-cdaa3b7907cc.gif)
+
 ![5dz3eg](https://user-images.githubusercontent.com/58444614/122695741-faf8ff80-d249-11eb-92ee-dff6301d1c34.gif)
